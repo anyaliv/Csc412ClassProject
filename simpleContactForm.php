@@ -1,8 +1,3 @@
-<?php
-
-$action=$_REQUEST['action'];
-if ($action=="")    /* display the contact form */
-    {
     ?>
     <form  action="" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="action" value="submit">
@@ -28,9 +23,8 @@ else                /* send the submitted data */
     else{        
         $from="From: $name<$email>\r\nReturn-path: $email";
         $subject="Message sent using your contact form";
-        mail("anyalivshyts@gmail.com", $subject, $message, $from);
+        mail("youremail@yoursite.com", $subject, $message, $from);
         echo "Email sent!";
         }
     }  
-
-    
+?>
